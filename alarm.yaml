@@ -1,15 +1,15 @@
 esphome:
   name: alarm
+  comment: "Paradox alarm system"
   platform: ESP8266
-  board: nodemcuv2
+  board: d1_mini
   
   includes:
     - paradox_combus_src/
 
 wifi:
-  ssid: !secret wifi_name
+  ssid: !secret wifi_ssid
   password: !secret wifi_password
-
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "alarm"
